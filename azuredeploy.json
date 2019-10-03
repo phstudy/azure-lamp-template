@@ -32,7 +32,6 @@
         },
         "adminUsername": {
             "type": "string",
-            "defaultValue": "admin",            
             "metadata": {
                 "description": "VM SSH 帳號"
             }
