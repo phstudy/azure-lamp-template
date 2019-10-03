@@ -172,34 +172,27 @@
             }
         },
         {
+            "type": "Microsoft.Compute/virtualMachines/extensions",
             "name": "[concat(parameters('virtualMachineName'),'/newuserscript')]",
-            "apiVersion": "2015-01-01",
-            "type": "Microsoft.Resources/deployments",
-            "properties": {
-                "mode": "incremental",
-                "templateLink": {
-                    "uri": "https://gallery.azure.com/artifact/20161101/microsoft.custom-script-linux-arm.2.0.56/Artifacts/MainTemplate.json"
-                },
-                "parameters": {
-                    "vmName": {
-                        "value": "[parameters('virtualMachineName')]"
-                    },
-                    "location": {
-                        "value": "[variables('location')]"
-                    },
-                    "fileUris": {
-                        "value": [
-                            "https://raw.githubusercontent.com/phstudy/azure-lamp-template/master/install_lamp.sh"
-                        ]
-                    },
-                    "commandToExecute": {
-                        "value": "[concat('sh install_lamp.sh ', parameters('mySqlPassword'))]"
-                    }
-                }
-            },
+            "apiVersion": "2015-06-15",
+            "location": "[variables('location')]",
             "dependsOn": [
                 "[concat('Microsoft.Compute/virtualMachines/', parameters('virtualMachineName'))]"
-            ]
+            ],
+            "properties": {
+                "publisher": "Microsoft.Azure.Extensions",
+                "type": "CustomScript",
+                "typeHandlerVersion": "2.0",
+                "autoUpgradeMinorVersion": true,
+                "settings": {
+                    "fileUris": [
+                        "https://raw.githubusercontent.com/phstudy/azure-lamp-template/master/install_lamp.sh"
+                    ]
+                },
+                "protectedSettings": {
+                    "commandToExecute": "[concat('sh install_lamp.sh ', parameters('mySqlPassword'))]"
+                }
+            }
         }
     ],
     "outputs": {
