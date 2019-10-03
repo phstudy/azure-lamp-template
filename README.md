@@ -1,6 +1,6 @@
 # Deploy a LAMP app on Ubuntu
 
-# LAMP version info.:
+## Version:
 - Ubuntu 18.04-LTS
 - Apache2
 - PHP 7.2
