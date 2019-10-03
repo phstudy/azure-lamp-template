@@ -10,9 +10,10 @@
         },
         "virtualMachineSize": {
             "type": "string",
-            "defaultValue": "Standard_D2s_v3",
+            "defaultValue": "Standard_B1s",
             "allowedValues": [
-                "Standard_D2s_v3"
+                "Standard_B1s"
+                "Standard_A0"
             ],
             "metadata": {
                 "description": "機器規格"
