@@ -189,7 +189,7 @@
                     },
                     "fileUris": {
                         "value": [
-                            "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/lamp-app/install_lamp.sh"
+                            "https://raw.githubusercontent.com/phstudy/azure-lamp-template/master/install_lamp.sh"
                         ]
                     },
                     "commandToExecute": {
