@@ -1,4 +1,4 @@
-# Deploy a LAMP app on Ubuntu
+# Azure Template: Deploying a LAMP app on Ubuntu
 
 ## Version:
 - Ubuntu 18.04-LTS
