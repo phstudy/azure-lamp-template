@@ -172,7 +172,7 @@
             }
         },
         {
-            "name": "[concat(variables('vmName'),'/newuserscript')]",
+            "name": "[concat(parameters('virtualMachineName'),'/newuserscript')]",
             "apiVersion": "2015-01-01",
             "type": "Microsoft.Resources/deployments",
             "properties": {
@@ -182,7 +182,7 @@
                 },
                 "parameters": {
                     "vmName": {
-                        "value": "[variables('vmName')]"
+                        "value": "[parameters('virtualMachineName')]"
                     },
                     "location": {
                         "value": "[variables('location')]"
