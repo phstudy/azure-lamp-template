@@ -6,47 +6,47 @@
             "type": "string",
             "metadata": {
                 "description": "機器名稱"
-            }                 
+            }
         },
         "virtualMachineSize": {
             "type": "string",
             "defaultValue": "Standard_D2s_v3",
             "allowedValues": [
-              "Standard_D2s_v3"
-            ],                
+                "Standard_D2s_v3"
+            ],
             "metadata": {
                 "description": "機器規格"
-            }                  
+            }
         },
         "publicIpAddressType": {
             "type": "string",
             "defaultValue": "Dynamic",
             "allowedValues": [
-              "Dynamic",
-              "Static"
-            ],            
+                "Dynamic",
+                "Static"
+            ],
             "metadata": {
                 "description": "外部 IP 的型態 (固定 IP 或動態 IP)"
-            }               
-        },        
+            }
+        },
         "adminUsername": {
             "type": "string",
             "metadata": {
                 "description": "VM admin 帳號"
-            }                        
+            }
         },
         "adminPassword": {
             "type": "secureString",
             "metadata": {
                 "description": "VM admin 密碼"
-            }            
+            }
         },
         "mySqlPassword": {
             "type": "securestring",
             "metadata": {
                 "description": "MySQL admin 密碼"
             }
-        },
+        }
     },
     "variables": {
         "networkSecurityGroupName": "[concat(parameters('virtualMachineName'), '-nsg')]",
@@ -106,16 +106,16 @@
             "properties": {
                 "addressSpace": {
                     "addressPrefixes": [
-                      "10.1.0.0/24"
+                        "10.1.0.0/24"
                     ]
                 },
                 "subnets": [
-                  {
-                    "name": "default",
-                    "properties": {
-                      "addressPrefix": "10.1.0.0/24"
+                    {
+                        "name": "default",
+                        "properties": {
+                            "addressPrefix": "10.1.0.0/24"
+                        }
                     }
-                  }
                 ]
             }
         },
