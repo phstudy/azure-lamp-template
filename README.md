@@ -1,13 +1,10 @@
-# Deploy a LAMP app on Ubuntu.
+# Deploy a LAMP app on Ubuntu
 
-<IMG SRC="https://azurequickstartsservice.blob.core.windows.net/badges/lamp-app/PublicLastTestDate.svg" />&nbsp;
-<IMG SRC="https://azurequickstartsservice.blob.core.windows.net/badges/lamp-app/PublicDeployment.svg" />&nbsp;
-
-<IMG SRC="https://azurequickstartsservice.blob.core.windows.net/badges/lamp-app/FairfaxLastTestDate.svg" />&nbsp;
-<IMG SRC="https://azurequickstartsservice.blob.core.windows.net/badges/lamp-app/FairfaxDeployment.svg" />&nbsp;
-
-<IMG SRC="https://azurequickstartsservice.blob.core.windows.net/badges/lamp-app/BestPracticeResult.svg" />&nbsp;
-<IMG SRC="https://azurequickstartsservice.blob.core.windows.net/badges/lamp-app/CredScanResult.svg" />&nbsp;
+# LAMP version info.:
+- Ubuntu 18.04-LTS
+- Apache2
+- PHP 7.2
+- MySQL 5.7
 
 <a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fphstudy%2Fazure-lamp-template%2Fmaster%2Fazuredeploy.json" target="_blank"><img src="https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/deploytoazure.png"/></a>
 <a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fphstudy%2Fazure-lamp-template%2Fmaster%2Fazuredeploy.json" target="_blank">
