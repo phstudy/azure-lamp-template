@@ -32,20 +32,21 @@
         },
         "adminUsername": {
             "type": "string",
+            "defaultValue": "admin",            
             "metadata": {
-                "description": "VM admin 帳號"
+                "description": "VM SSH 帳號"
             }
         },
         "adminPassword": {
             "type": "secureString",
             "metadata": {
-                "description": "VM admin 密碼"
+                "description": "VM SSH 密碼"
             }
         },
         "mySqlPassword": {
             "type": "securestring",
             "metadata": {
-                "description": "MySQL admin 密碼"
+                "description": "MySQL root 密碼"
             }
         }
     },
