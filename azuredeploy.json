@@ -49,11 +49,9 @@
         }
     },
     "variables": {
-        "networkSecurityGroupName": "[concat(parameters('virtualMachineName'), '-nsg')]",
         "networkInterfaceName": "[concat(parameters('virtualMachineName'), '-ni')]",
         "publicIpAddressName": "[concat(parameters('virtualMachineName'), '-ip')]",
         "virtualNetworkName": "[concat(parameters('virtualMachineName'), '-vnet')]",
-        "nsgId": "[resourceId(resourceGroup().name, 'Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupName'))]",
         "vnetId": "[resourceId(resourceGroup().name,'Microsoft.Network/virtualNetworks', variables('virtualNetworkName'))]",
         "subnetRef": "[concat(variables('vnetId'), '/subnets/default')]",
         "location": "[resourceGroup().location]"
@@ -65,7 +63,6 @@
             "apiVersion": "2018-10-01",
             "location": "[variables('location')]",
             "dependsOn": [
-                "[concat('Microsoft.Network/networkSecurityGroups/', variables('networkSecurityGroupName'))]",
                 "[concat('Microsoft.Network/virtualNetworks/', variables('virtualNetworkName'))]",
                 "[concat('Microsoft.Network/publicIpAddresses/', variables('publicIpAddressName'))]"
             ],
@@ -83,19 +80,7 @@
                             }
                         }
                     }
-                ],
-                "networkSecurityGroup": {
-                    "id": "[variables('nsgId')]"
-                }
-            }
-        },
-        {
-            "name": "[variables('networkSecurityGroupName')]",
-            "type": "Microsoft.Network/networkSecurityGroups",
-            "apiVersion": "2019-02-01",
-            "location": "[variables('location')]",
-            "properties": {
-                "securityRules": []
+                ]
             }
         },
         {
